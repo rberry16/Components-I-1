@@ -125,12 +125,18 @@ function articleMaker(data) {
   paragraph1.textContent = data.firstParagraph;
   paragraph2.textContent = data.secondParagraph;
   paragraph3.textContent = data.thirdParagraph;
-  expandButton.textContent = 'expand';
+  expandButton.textContent = 'show/hide';
+  
+  
+
+  article.classList.add('article');
+  articleDate.classList.add('date');
+  expandButton.classList.add('expandButton');
 
   expandButton.addEventListener('click', () => {
     article.classList.toggle('article-open');
   })
-
+  
   return article;
 }
 
